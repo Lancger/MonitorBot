@@ -57,16 +57,17 @@ def get_warning():
     if loadavg[0] >= loadavg_max and loadavg[2] >= loadavg_max:
         warning1 = f'⚠️<font color="#d30c0c">【警告】</font>您的云服务器当前负载率为(最近1、5、15分钟)-{loadavg}，负载率已达<font color="#d30c0c">{round(loadavg[2]/loadavg_max, 2)*100}%</font>，请及时检查系统是否存在问题，也可以@我，发送：基础信息，查看云服务器基础信息。'
         return warning1
-        
+    
+    print(base_info)
     if cpu_in_use >= 80:
         warning2 = f'⚠️<font color="#d30c0c">【警告】</font>您的云服务器当前CPU使用率为<font color="#d30c0c">{cpu_in_use}%</font>，请及时检查系统是否存在问题，也可以@我，发送：基础信息，查看云服务器基础信息。'
         return warning2
 
-    if vm_in_use >= 80:
+    if vm_in_use >= 0.01:
         warning3 = f'⚠️<font color="#d30c0c">【警告】</font>您的云服务器当前运行内存使用率为<font color="#d30c0c">{vm_in_use}%</font>，请及时检查系统是否存在问题，也可以@我，发送：基础信息，查看云服务器基础信息。'
         return warning3
 
-    if disk_in_use >= 80:
+    if disk_in_use >= 0.01:
         warning4 = f'⚠️<font color="#d30c0c">【警告】</font>您的云服务器当前磁盘使用率为<font color="#d30c0c">{disk_in_use}%</font>，请及时检查系统是否存在问题，也可以@我，发送：基础信息，查看云服务器基础信息。'
         return warning4
 
