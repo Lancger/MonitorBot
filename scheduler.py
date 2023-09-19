@@ -34,7 +34,7 @@ def every_seconds_30():
 sched = BlockingScheduler(timezone='Asia/Shanghai')
 
 # job_every_nine 每天早上9点运行一次  日常发送
-sched.add_job(every_day_nine, 'cron', hour=9)
+sched.add_job(every_day_nine, 'cron', seconds=30)
 
 # every_seconds_30 每30s执行一次  数据监控
 sched.add_job(every_seconds_30, 'interval', seconds=30)

@@ -63,11 +63,11 @@ def get_warning():
         warning2 = f'⚠️<font color="#d30c0c">【警告】</font>您的云服务器当前CPU使用率为<font color="#d30c0c">{cpu_in_use}%</font>，请及时检查系统是否存在问题，也可以@我，发送：基础信息，查看云服务器基础信息。'
         return warning2
 
-    if vm_in_use >= 0.01:
+    if vm_in_use >= 80:
         warning3 = f'⚠️<font color="#d30c0c">【警告】</font>您的云服务器当前运行内存使用率为<font color="#d30c0c">{vm_in_use}%</font>，请及时检查系统是否存在问题，也可以@我，发送：基础信息，查看云服务器基础信息。'
         return warning3
 
-    if disk_in_use >= 0.01:
+    if disk_in_use >= 80:
         warning4 = f'⚠️<font color="#d30c0c">【警告】</font>您的云服务器当前磁盘使用率为<font color="#d30c0c">{disk_in_use}%</font>，请及时检查系统是否存在问题，也可以@我，发送：基础信息，查看云服务器基础信息。'
         return warning4
 
