@@ -33,7 +33,7 @@ def get_server_info():
     
     base_info = f"""### 服务器基本信息
 > 您的云服务器已运行-{run_times}，机器负载情况为(最近1、5、15分钟)：{loadavg}
-![](https://img-blog.csdnimg.cn/246a90c55c4e46dca089731c5fd00833.png)
+![](https://github.com/Lancger/opslinux/blob/master/images/cat.png)
 - 目前CPU使用率为：{cpu_in_use}%，
 - 系统运行内存使用率为：{vm_in_use}%，
 - 剩余可用运行内存为：{vm_available}GiB，
